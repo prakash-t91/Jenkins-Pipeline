@@ -16,11 +16,11 @@ pipeline {
                  script{
                         dir("Terraform-AWS")
                         {
-                        checkout scmGit(branches: [[name: '*/Release']], extensions: [], userRemoteConfigs: [[credentialsId: 'GITHUB_CRED', url: 'https://github.com/JPrakashJP/ElectroStoreWeb-App.git']])
+                        checkout scmGit(branches: [[name: '*/Release']], extensions: [], userRemoteConfigs: [[credentialsId: 'GITHUB_CRED', url: 'https://github.com/prakash-t91/Terraform-AWS.git']])
                      withCredentials([gitUsernamePassword(credentialsId: 'GITHUB_CRED', gitToolName: 'Git')]) { 
 		    sh '''
-                    git config user.name "JPrakashJP"
-		    git config user.email "techprakashtp@outlook.com"  
+                    git config user.name "prakash-t91"
+		    git config user.email "jyoti.prakasht91@gmail.com"  
 
 		   ''' 
           	     }
